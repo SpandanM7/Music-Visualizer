@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from moviepy.video.VideoClip import ImageClip
 
 # Step 1: Load the MP3 and Extract Audio Data
-audio_path = "rock_me_baby.mp3"  # Replace with your MP3 file path
+audio_path = "my_music.mp3"  # Replace with your MP3 file path
 y, sr = librosa.load(audio_path, sr=None)  # Load the MP3 file with original sample rate
 duration = librosa.get_duration(y=y, sr=sr)  # Get the duration in seconds
 
@@ -31,7 +31,7 @@ def make_frame(t):
     return mpy.ImageClip('frame.png').img  # Return the image of the waveform
 
 # Step 3: Create Background Clip (Image/GIF/Video)
-background_path = "your_background_image_or_gif.jpg"  # Replace with your image or video path
+background_path = "cover1.jpg"  # Replace with your image or video path
 background_clip = ImageClip(background_path, duration=duration)
 
 # Step 4: Create the continuous waveform video clip
